@@ -1,0 +1,213 @@
+Reading /tools/mentor/questa/10.1d/questasim/tcl/vsim/pref.tcl 
+
+# 10.1d
+
+# do run.do 
+# QuestaSim vcom 10.1d Compiler 2012.11 Nov  1 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity single_cycle
+# -- Compiling architecture add_and_xor of single_cycle
+# -- Compiling entity three_cycle
+# -- Compiling architecture mult of three_cycle
+# -- Compiling entity tinyalu
+# -- Compiling architecture rtl of tinyalu
+# -- Loading entity single_cycle
+# -- Loading entity three_cycle
+# QuestaSim vlog 10.1d Compiler 2012.11 Nov  1 2012
+# -- Compiling package tinyalu_pkg
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1c Built-in)
+# ** Note: (vlog-2286) Using implicit +incdir+/tools/mentor/questa/10.1d/questasim/uvm-1.1c/../verilog_src/uvm-1.1c/src from import uvm_pkg
+# -- Compiling interface tinyalu_bfm
+# -- Importing package tinyalu_pkg
+# ** Warning: tinyalu_bfm.sv(68): (vlog-2596) Component name 'write_to_monitor' is not on a downward path.
+# ** Warning: tinyalu_bfm.sv(83): (vlog-2596) Component name 'write_to_monitor' is not on a downward path.
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# QuestaSim vopt 10.1d Compiler 2012.11 Nov  1 2012
+# 
+# Top level modules:
+# 	top
+# 
+# Analyzing design...
+# -- Loading module top
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1c Built-in)
+# -- Importing package tinyalu_pkg
+# -- Loading package mtiUvm.questa_uvm_pkg
+# -- Loading interface tinyalu_bfm
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading entity tinyalu
+# -- Loading architecture rtl of tinyalu
+# -- Loading entity single_cycle
+# -- Loading entity three_cycle
+# -- Loading architecture add_and_xor of single_cycle
+# -- Loading architecture mult of three_cycle
+# Optimizing 8 design-units (inlining 0 instances):
+# -- Optimizing architecture add_and_xor of single_cycle
+# -- Optimizing architecture mult of three_cycle
+# -- Optimizing architecture rtl of tinyalu
+# -- Optimizing module top(fast)
+# -- Optimizing package mtiUvm.uvm_pkg (uvm-1.1c Built-in)(fast)
+# -- Optimizing package tinyalu_pkg(fast)
+# -- Optimizing package mtiUvm.questa_uvm_pkg(fast)
+# -- Optimizing interface tinyalu_bfm(fast)
+# ** Warning: tinyalu_bfm.sv(68): (vopt-2596) Component name 'write_to_monitor' is not on a downward path.
+# ** Warning: tinyalu_bfm.sv(83): (vopt-2596) Component name 'write_to_monitor' is not on a downward path.
+# Optimized design name is top_optimized
+# vsim +UVM_TESTNAME=random_test +UVM_VERBOSITY=400 -coverage top_optimized 
+# //  Questa Sim
+# //  Version 10.1d linux Nov  1 2012
+# //
+# //  Copyright 1991-2012 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading work.tinyalu_pkg(fast)
+# Loading work.top(fast)
+# Loading work.tinyalu_bfm(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.tinyalu(rtl)#1
+# Loading work.single_cycle(add_and_xor)#1
+# Loading work.three_cycle(mult)#1
+# Loading /tools/mentor/questa/10.1d/questasim/uvm-1.1c/linux/uvm_dpi.so
+# 1
+# ----------------------------------------------------------------
+# UVM-1.1c
+# (C) 2007-2012 Mentor Graphics Corporation
+# (C) 2007-2012 Cadence Design Systems, Inc.
+# (C) 2006-2012 Synopsys, Inc.
+# (C) 2011-2012 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO @ 0: reporter [NSTVERB] Non-standard verbosity value, using provided '400'.
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test random_test...
+# ----------------------------------------------------------------------
+# report handler state dump
+# 
+# 
+# +-----------------+
+# |   Verbosities   |
+# +-----------------+
+# 
+# max verbosity level =         400
+# *** verbosities by id
+# 
+# *** verbosities by id and severity
+# 
+# +-------------+
+# |   actions   |
+# +-------------+
+# 
+# *** actions by severity
+# UVM_INFO = DISPLAY 
+# UVM_WARNING = DISPLAY 
+# UVM_ERROR = DISPLAY COUNT 
+# UVM_FATAL = DISPLAY EXIT 
+# 
+# *** actions by id
+# 
+# *** actions by id and severity
+# 
+# +-------------+
+# |    files    |
+# +-------------+
+# 
+# default file handle =           0
+# 
+# *** files by severity
+# UVM_INFO =           0
+# UVM_WARNING =           0
+# UVM_ERROR =           0
+# UVM_FATAL =           0
+# 
+# *** files by id
+# 
+# *** files by id and severity
+# report server state
+# 
+# +-------------+
+# |   counts    |
+# +-------------+
+# 
+# max quit count =     0
+# quit count =     0
+# UVM_INFO :    4
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# NSTVERB :    1
+# Questa UVM :    2
+# RNTST :    1
+# ----------------------------------------------------------------------
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(272) @ 0: reporter [Questa UVM] End Of Elaboration
+# UVM_INFO tb_classes/tinyalu_tester_c.svh(13) @ 0: uvm_test_top.env.tester [GET OP] op_choice: 100
+# UVM_INFO tb_classes/tinyalu_tester_c.svh(13) @ 0: uvm_test_top.env.tester [GET OP] op_choice: 101
+# UVM_INFO tb_classes/tinyalu_tester_c.svh(13) @ 31: uvm_test_top.env.tester [GET OP] op_choice: 101
+# UVM_INFO tb_classes/tinyalu_tester_c.svh(13) @ 120: uvm_test_top.env.tester [GET OP] op_choice: 001
+# UVM_INFO tb_classes/tinyalu_selfcheck_c.svh(42) @ 130: uvm_test_top.env.selfcheck [SELF CHECKER] PASS:  09 mul_op ff = 08f7 (08f7 predicted)
+# UVM_INFO tb_classes/tinyalu_tester_c.svh(13) @ 160: uvm_test_top.env.tester [GET OP] op_choice: 111
+# UVM_ERROR tb_classes/tinyalu_selfcheck_c.svh(40) @ 170: uvm_test_top.env.selfcheck [SELf CHECKER] FAIL:  65 add_op 01 = 0066 (0067 predicted)
+# UVM_INFO tb_classes/tinyalu_tester_c.svh(13) @ 200: uvm_test_top.env.tester [GET OP] op_choice: 000
+# UVM_ERROR tb_classes/tinyalu_selfcheck_c.svh(40) @ 210: uvm_test_top.env.selfcheck [SELf CHECKER] FAIL:  3d add_op 8c = 00c9 (00ca predicted)
+# UVM_INFO tb_classes/tinyalu_tester_c.svh(13) @ 240: uvm_test_top.env.tester [GET OP] op_choice: 101
+# UVM_ERROR tb_classes/tinyalu_selfcheck_c.svh(40) @ 250: uvm_test_top.env.selfcheck [SELf CHECKER] FAIL:  c5 add_op e5 = 01aa (01ab predicted)
+# UVM_INFO tb_classes/tinyalu_tester_c.svh(13) @ 340: uvm_test_top.env.tester [GET OP] op_choice: 000
+# UVM_INFO tb_classes/tinyalu_selfcheck_c.svh(42) @ 350: uvm_test_top.env.selfcheck [SELF CHECKER] PASS:  8f mul_op ce = 7312 (7312 predicted)
+# UVM_INFO tb_classes/tinyalu_tester_c.svh(13) @ 371: uvm_test_top.env.tester [GET OP] op_choice: 101
+# UVM_INFO tb_classes/tinyalu_tester_c.svh(13) @ 400: uvm_test_top.env.tester [GET OP] op_choice: 101
+# UVM_ERROR tb_classes/tinyalu_selfcheck_c.svh(40) @ 410: uvm_test_top.env.selfcheck [SELf CHECKER] FAIL:  ff add_op 80 = 017f (0180 predicted)
+# UVM_ERROR tb_classes/tinyalu_selfcheck_c.svh(40) @ 470: uvm_test_top.env.selfcheck [SELf CHECKER] FAIL:  ff add_op ff = 01fe (01ff predicted)
+# UVM_ERROR tb_classes/tinyalu_selfcheck_c.svh(40) @ 510: uvm_test_top.env.selfcheck [SELf CHECKER] FAIL:  ae add_op cf = 017d (017e predicted)
+# UVM_INFO verilog_src/uvm-1.1c/src/base/uvm_objection.svh(1098) @ 931: reporter [TEST_DONE] All end-of-test objections have been dropped. Calling stop tasks
+# UVM_INFO verilog_src/uvm-1.1c/src/base/uvm_objection.svh(1121) @ 931: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   19
+# UVM_WARNING :    0
+# UVM_ERROR :    6
+# UVM_FATAL :    0
+# ** Report counts by id
+# [GET OP]    10
+# [NSTVERB]     1
+# [Questa UVM]     3
+# [RNTST]     1
+# [SELF CHECKER]     2
+# [SELf CHECKER]     6
+# [TEST_DONE]     2
+# ** Note: $finish    : /tools/mentor/questa/10.1d/questasim/linux/../verilog_src/uvm-1.1c/src/base/uvm_root.svh(427)
+#    Time: 931 ns  Iteration: 53  Instance: /top
+# 1
+# Break in Task uvm_pkg/uvm_root::run_test at /tools/mentor/questa/10.1d/questasim/linux/../verilog_src/uvm-1.1c/src/base/uvm_root.svh line 427
+# Stopped at /tools/mentor/questa/10.1d/questasim/linux/../verilog_src/uvm-1.1c/src/base/uvm_root.svh line 427 

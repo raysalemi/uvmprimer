@@ -1,0 +1,370 @@
+# do run.do 
+# QuestaSim vcom 10.2c Compiler 2013.07 Jul 18 2013
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity single_cycle
+# -- Compiling architecture add_and_xor of single_cycle
+# -- Compiling entity three_cycle
+# -- Compiling architecture mult of three_cycle
+# -- Compiling entity tinyalu
+# -- Compiling architecture rtl of tinyalu
+# -- Loading entity single_cycle
+# -- Loading entity three_cycle
+# QuestaSim vlog 10.2c Compiler 2013.07 Jul 18 2013
+# -- Compiling package tinyalu_pkg
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Compiling interface tinyalu_bfm
+# -- Importing package tinyalu_pkg
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# QuestaSim vopt 10.2c Compiler 2013.07 Jul 18 2013
+# 
+# Top level modules:
+# 	top
+# 
+# Analyzing design...
+# -- Loading module top
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Importing package tinyalu_pkg
+# -- Loading package mtiUvm.questa_uvm_pkg
+# -- Loading interface tinyalu_bfm
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading entity tinyalu
+# -- Loading architecture rtl of tinyalu
+# -- Loading entity single_cycle
+# -- Loading entity three_cycle
+# -- Loading architecture add_and_xor of single_cycle
+# -- Loading architecture mult of three_cycle
+# Optimizing 8 design-units (inlining 0 instances):
+# -- Optimizing architecture add_and_xor of single_cycle
+# -- Optimizing architecture mult of three_cycle
+# -- Optimizing architecture rtl of tinyalu
+# -- Optimizing interface tinyalu_bfm(fast)
+# -- Optimizing module top(fast)
+# -- Optimizing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)(fast)
+# -- Optimizing package tinyalu_pkg(fast)
+# -- Optimizing package mtiUvm.questa_uvm_pkg(fast)
+# Optimized design name is top_optimized
+# vsim +UVM_TESTNAME=fibonacci_test -coverage top_optimized 
+# //  Questa Sim
+# //  Version 10.2c linux Jul 18 2013
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.tinyalu_pkg(fast)
+# Loading work.top(fast)
+# Loading work.tinyalu_bfm(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.tinyalu(rtl)#1
+# Loading work.single_cycle(add_and_xor)#1
+# Loading work.three_cycle(mult)#1
+# Loading /tools/mentor/questa/10.2c/questa_sim/uvm-1.1d/linux/uvm_dpi.so
+# 1
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.2
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test fibonacci_test...
+# UVM_INFO tb_classes/fibonacci_sequence.svh(35) @ 31: uvm_test_top.env_h.sequencer_h@@fibonacci [FIBONACCI]  Fib(01) = 00
+# UVM_INFO tb_classes/fibonacci_sequence.svh(36) @ 31: uvm_test_top.env_h.sequencer_h@@fibonacci [FIBONACCI]  Fib(02) = 01
+# UVM_INFO tb_classes/fibonacci_sequence.svh(46) @ 60: uvm_test_top.env_h.sequencer_h@@fibonacci [FIBONACCI] Fib(03) = 01
+# UVM_INFO tb_classes/fibonacci_sequence.svh(46) @ 100: uvm_test_top.env_h.sequencer_h@@fibonacci [FIBONACCI] Fib(04) = 02
+# UVM_INFO tb_classes/fibonacci_sequence.svh(46) @ 140: uvm_test_top.env_h.sequencer_h@@fibonacci [FIBONACCI] Fib(05) = 03
+# UVM_INFO tb_classes/fibonacci_sequence.svh(46) @ 180: uvm_test_top.env_h.sequencer_h@@fibonacci [FIBONACCI] Fib(06) = 05
+# UVM_INFO tb_classes/fibonacci_sequence.svh(46) @ 220: uvm_test_top.env_h.sequencer_h@@fibonacci [FIBONACCI] Fib(07) = 08
+# UVM_INFO tb_classes/fibonacci_sequence.svh(46) @ 260: uvm_test_top.env_h.sequencer_h@@fibonacci [FIBONACCI] Fib(08) = 13
+# UVM_INFO tb_classes/fibonacci_sequence.svh(46) @ 300: uvm_test_top.env_h.sequencer_h@@fibonacci [FIBONACCI] Fib(09) = 21
+# UVM_INFO tb_classes/fibonacci_sequence.svh(46) @ 340: uvm_test_top.env_h.sequencer_h@@fibonacci [FIBONACCI] Fib(10) = 34
+# UVM_INFO tb_classes/fibonacci_sequence.svh(46) @ 380: uvm_test_top.env_h.sequencer_h@@fibonacci [FIBONACCI] Fib(11) = 55
+# UVM_INFO tb_classes/fibonacci_sequence.svh(46) @ 420: uvm_test_top.env_h.sequencer_h@@fibonacci [FIBONACCI] Fib(12) = 89
+# UVM_INFO tb_classes/fibonacci_sequence.svh(46) @ 460: uvm_test_top.env_h.sequencer_h@@fibonacci [FIBONACCI] Fib(13) = 144
+# UVM_INFO tb_classes/fibonacci_sequence.svh(46) @ 500: uvm_test_top.env_h.sequencer_h@@fibonacci [FIBONACCI] Fib(14) = 233
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 500: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   18
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [FIBONACCI]    14
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# ** Note: $finish    : /tools/mentor/questa/10.2c/questa_sim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 500 ns  Iteration: 61  Instance: /top
+# 1
+# Break in Task uvm_pkg/uvm_root::run_test at /tools/mentor/questa/10.2c/questa_sim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
+# Stopped at /tools/mentor/questa/10.2c/questa_sim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430 
+# coverage exclude -src tinyalu_dut/single_cycle_add_and_xor.vhd -scope /top/DUT/add_and_xor -line 49 -code b
+# ** Note: (vsim-4036) The 'coverage exclude' command had no effect because
+# no matching coverage data was found.
+# 
+# vsim +UVM_TESTNAME=parallel_test -coverage top_optimized 
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.tinyalu_pkg(fast)
+# Loading work.top(fast)
+# Loading work.tinyalu_bfm(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.tinyalu(rtl)#1
+# Loading work.single_cycle(add_and_xor)#1
+# Loading work.three_cycle(mult)#1
+# Loading /tools/mentor/questa/10.2c/questa_sim/uvm-1.1d/linux/uvm_dpi.so
+# 1
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.2
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test parallel_test...
+# UVM_INFO tb_classes/fibonacci_sequence.svh(35) @ 71: uvm_test_top.env_h.sequencer_h@@fibonacci [FIBONACCI]  Fib(01) = 00
+# UVM_INFO tb_classes/fibonacci_sequence.svh(36) @ 71: uvm_test_top.env_h.sequencer_h@@fibonacci [FIBONACCI]  Fib(02) = 01
+# UVM_INFO tb_classes/short_random_sequence.svh(32) @ 71: uvm_test_top.env_h.sequencer_h@@short_random [SHORT RANDOM] random command: A: 22  B: 21   op: and_op = 0000
+# UVM_INFO tb_classes/fibonacci_sequence.svh(46) @ 140: uvm_test_top.env_h.sequencer_h@@fibonacci [FIBONACCI] Fib(03) = 01
+# UVM_INFO tb_classes/short_random_sequence.svh(32) @ 140: uvm_test_top.env_h.sequencer_h@@short_random [SHORT RANDOM] random command: A: e4  B: 22   op: rst_op = 0000
+# UVM_INFO tb_classes/fibonacci_sequence.svh(46) @ 200: uvm_test_top.env_h.sequencer_h@@fibonacci [FIBONACCI] Fib(04) = 02
+# UVM_INFO tb_classes/short_random_sequence.svh(32) @ 200: uvm_test_top.env_h.sequencer_h@@short_random [SHORT RANDOM] random command: A: 93  B: ed   op: add_op = 0000
+# UVM_INFO tb_classes/fibonacci_sequence.svh(46) @ 280: uvm_test_top.env_h.sequencer_h@@fibonacci [FIBONACCI] Fib(05) = 03
+# UVM_INFO tb_classes/short_random_sequence.svh(32) @ 280: uvm_test_top.env_h.sequencer_h@@short_random [SHORT RANDOM] random command: A: 83  B: 7f   op: add_op = 0000
+# UVM_INFO tb_classes/fibonacci_sequence.svh(46) @ 360: uvm_test_top.env_h.sequencer_h@@fibonacci [FIBONACCI] Fib(06) = 05
+# UVM_INFO tb_classes/short_random_sequence.svh(32) @ 360: uvm_test_top.env_h.sequencer_h@@short_random [SHORT RANDOM] random command: A: b2  B: 71   op: xor_op = 0000
+# UVM_INFO tb_classes/fibonacci_sequence.svh(46) @ 440: uvm_test_top.env_h.sequencer_h@@fibonacci [FIBONACCI] Fib(07) = 08
+# UVM_INFO tb_classes/short_random_sequence.svh(32) @ 440: uvm_test_top.env_h.sequencer_h@@short_random [SHORT RANDOM] random command: A: 97  B: 67   op: mul_op = 0000
+# UVM_INFO tb_classes/fibonacci_sequence.svh(46) @ 580: uvm_test_top.env_h.sequencer_h@@fibonacci [FIBONACCI] Fib(08) = 13
+# UVM_INFO tb_classes/short_random_sequence.svh(32) @ 580: uvm_test_top.env_h.sequencer_h@@short_random [SHORT RANDOM] random command: A: 40  B: db   op: mul_op = 0000
+# UVM_INFO tb_classes/fibonacci_sequence.svh(46) @ 720: uvm_test_top.env_h.sequencer_h@@fibonacci [FIBONACCI] Fib(09) = 21
+# UVM_INFO tb_classes/short_random_sequence.svh(32) @ 720: uvm_test_top.env_h.sequencer_h@@short_random [SHORT RANDOM] random command: A: df  B: 98   op: and_op = 0000
+# UVM_INFO tb_classes/fibonacci_sequence.svh(46) @ 800: uvm_test_top.env_h.sequencer_h@@fibonacci [FIBONACCI] Fib(10) = 34
+# UVM_INFO tb_classes/short_random_sequence.svh(32) @ 800: uvm_test_top.env_h.sequencer_h@@short_random [SHORT RANDOM] random command: A: 9d  B: 35   op: add_op = 0000
+# UVM_INFO tb_classes/fibonacci_sequence.svh(46) @ 880: uvm_test_top.env_h.sequencer_h@@fibonacci [FIBONACCI] Fib(11) = 55
+# UVM_INFO tb_classes/short_random_sequence.svh(32) @ 880: uvm_test_top.env_h.sequencer_h@@short_random [SHORT RANDOM] random command: A: 3b  B: 6d   op: add_op = 0000
+# UVM_INFO tb_classes/fibonacci_sequence.svh(46) @ 960: uvm_test_top.env_h.sequencer_h@@fibonacci [FIBONACCI] Fib(12) = 89
+# UVM_INFO tb_classes/short_random_sequence.svh(32) @ 960: uvm_test_top.env_h.sequencer_h@@short_random [SHORT RANDOM] random command: A: 31  B: a0   op: and_op = 0000
+# UVM_INFO tb_classes/fibonacci_sequence.svh(46) @ 1040: uvm_test_top.env_h.sequencer_h@@fibonacci [FIBONACCI] Fib(13) = 144
+# UVM_INFO tb_classes/short_random_sequence.svh(32) @ 1040: uvm_test_top.env_h.sequencer_h@@short_random [SHORT RANDOM] random command: A: e7  B: 09   op: xor_op = 0000
+# UVM_INFO tb_classes/fibonacci_sequence.svh(46) @ 1120: uvm_test_top.env_h.sequencer_h@@fibonacci [FIBONACCI] Fib(14) = 233
+# UVM_INFO tb_classes/short_random_sequence.svh(32) @ 1120: uvm_test_top.env_h.sequencer_h@@short_random [SHORT RANDOM] random command: A: fe  B: 9d   op: add_op = 0000
+# UVM_INFO tb_classes/short_random_sequence.svh(32) @ 1160: uvm_test_top.env_h.sequencer_h@@short_random [SHORT RANDOM] random command: A: 44  B: a1   op: and_op = 0000
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 1200: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   32
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [FIBONACCI]    14
+# [Questa UVM]     2
+# [RNTST]     1
+# [SHORT RANDOM]    14
+# [TEST_DONE]     1
+# ** Note: $finish    : /tools/mentor/questa/10.2c/questa_sim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 1200 ns  Iteration: 66  Instance: /top
+# 1
+# Break in Task uvm_pkg/uvm_root::run_test at /tools/mentor/questa/10.2c/questa_sim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
+# Stopped at /tools/mentor/questa/10.2c/questa_sim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430 
+# coverage exclude -src tinyalu_dut/single_cycle_add_and_xor.vhd -scope /top/DUT/add_and_xor -line 49 -code b
+# ** Note: (vsim-4036) The 'coverage exclude' command had no effect because
+# no matching coverage data was found.
+# 
+# vsim +UVM_TESTNAME=full_test -coverage top_optimized 
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.tinyalu_pkg(fast)
+# Loading work.top(fast)
+# Loading work.tinyalu_bfm(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.tinyalu(rtl)#1
+# Loading work.single_cycle(add_and_xor)#1
+# Loading work.three_cycle(mult)#1
+# Loading /tools/mentor/questa/10.2c/questa_sim/uvm-1.1d/linux/uvm_dpi.so
+# 1
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.2
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test full_test...
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 262060: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :    4
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# ** Note: $finish    : /tools/mentor/questa/10.2c/questa_sim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 262060 ns  Iteration: 66  Instance: /top
+# 1
+# Break in Task uvm_pkg/uvm_root::run_test at /tools/mentor/questa/10.2c/questa_sim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
+# Stopped at /tools/mentor/questa/10.2c/questa_sim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430 
+# coverage exclude -src tinyalu_dut/single_cycle_add_and_xor.vhd -scope /top/DUT/add_and_xor -line 49 -code b
+# ** Note: (vsim-4036) The 'coverage exclude' command had no effect because
+# no matching coverage data was found.
+# 
+# Merging file fibonacci_test.ucdb
+# Merging file parallel_test.ucdb
+# Merging file full_test.ucdb
+# Writing merged result to tinyalu.ucdb
+# 
+# COVERGROUP COVERAGE:
+# ----------------------------------------------------------------------------------------------------
+# Covergroup                                             Metric      Goal/ Status                    
+#                                                                 At Least                           
+# ----------------------------------------------------------------------------------------------------
+#  TYPE /tinyalu_pkg/coverage/op_cov                     100.0%        100 Covered                   
+#     Coverpoint op_cov::op_set                          100.0%        100 Covered                   
+#  CLASS coverage
+#  Covergroup instance \/tinyalu_pkg::coverage::op_cov  
+#                                                        100.0%        100 Covered                   
+#     Coverpoint op_set                                  100.0%        100 Covered                   
+#         covered/total bins:                                23         23                           
+#         missing/total bins:                                 0         23                           
+#         bin single_cycle[no_op]                           223          1 Covered                   
+#         bin single_cycle[add_op]                         1128          1 Covered                   
+#         bin single_cycle[and_op]                         1126          1 Covered                   
+#         bin single_cycle[xor_op]                         1136          1 Covered                   
+#         bin single_cycle[rst_op]                          245          1 Covered                   
+#         bin multi_cycle                                  1182          1 Covered                   
+#         bin opn_rst[add_op=>rst_op]                        67          1 Covered                   
+#         bin opn_rst[no_op=>rst_op]                         10          1 Covered                   
+#         bin rst_opn[rst_op=>add_op]                        52          1 Covered                   
+#         bin rst_opn[rst_op=>no_op]                         10          1 Covered                   
+#         bin sngl_mul[xor_op=>mul_op]                      267          1 Covered                   
+#         bin sngl_mul[and_op=>mul_op]                      262          1 Covered                   
+#         bin sngl_mul[add_op=>mul_op]                      279          1 Covered                   
+#         bin sngl_mul[no_op=>mul_op]                        54          1 Covered                   
+#         bin mul_sngl[mul_op=>xor_op]                      272          1 Covered                   
+#         bin mul_sngl[mul_op=>and_op]                      282          1 Covered                   
+#         bin mul_sngl[mul_op=>add_op]                      263          1 Covered                   
+#         bin mul_sngl[mul_op=>no_op]                        53          1 Covered                   
+#         bin twoops[add_op[*2]]                            247          1 Covered                   
+#         bin twoops[no_op[*2]]                              12          1 Covered                   
+#         bin manymult                                       53          1 Covered                   
+#         bin rstmulrst                                      24          1 Covered                   
+#         bin rstmulrstim                                     5          1 Covered                   
+#  TYPE /tinyalu_pkg/coverage/zeros_or_ones_on_ops       100.0%        100 Covered                   
+#     Coverpoint zeros_or_ones_on_ops::all_ops           100.0%        100 Covered                   
+#         covered/total bins:                                 4          4                           
+#         missing/total bins:                                 0          4                           
+#         ignore_bin null_ops                               468            Occurred                  
+#         bin auto[add_op]                                 1128          1 Covered                   
+#         bin auto[and_op]                                 1126          1 Covered                   
+#         bin auto[xor_op]                                 1136          1 Covered                   
+#         bin auto[mul_op]                                 1182          1 Covered                   
+#     Coverpoint zeros_or_ones_on_ops::a_leg             100.0%        100 Covered                   
+#         covered/total bins:                                 3          3                           
+#         missing/total bins:                                 0          3                           
+#         bin zeros                                          17          1 Covered                   
+#         bin others                                       5007          1 Covered                   
+#         bin ones                                           16          1 Covered                   
+#     Coverpoint zeros_or_ones_on_ops::b_leg             100.0%        100 Covered                   
+#         covered/total bins:                                 3          3                           
+#         missing/total bins:                                 0          3                           
+#         bin zeros                                         262          1 Covered                   
+#         bin others                                       4758          1 Covered                   
+#         bin ones                                           20          1 Covered                   
+#     Cross zeros_or_ones_on_ops::op_00_FF               100.0%        100 Covered                   
+#         covered/total bins:                                 9          9                           
+#         missing/total bins:                                 0          9                           
+#         ignore_bin others_only                           4509            Occurred                  
+#         bin add_00                                          9          1 Covered                   
+#         bin add_FF                                          4          1 Covered                   
+#         bin and_00                                          6          1 Covered                   
+#         bin and_FF                                          5          1 Covered                   
+#         bin xor_00                                         12          1 Covered                   
+#         bin xor_FF                                         12          1 Covered                   
+#         bin mul_00                                          5          1 Covered                   
+#         bin mul_FF                                         10          1 Covered                   
+#         bin mul_max                                         1          1 Covered                   
+#  CLASS coverage
+# 
+# TOTAL COVERGROUP COVERAGE: 100.0%  COVERGROUP TYPES: 2
