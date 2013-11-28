@@ -2,7 +2,7 @@
 
 There is nothing worse than a syntax error in a technical teaching
 book; the poor student is already learning new things and the error is
-just an unecessary curve ball.
+just an unnecessary curve ball.
 
 To avoid that problem, I've compiled and simulated every example in
 THE UVM PRIMER and included the examples here.  You can run these code
