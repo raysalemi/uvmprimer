@@ -12,6 +12,7 @@ log /* -r
 run -all
 coverage exclude -src tinyalu_dut/single_cycle_add_and_xor.vhd -line 49 -code s
 coverage exclude -src tinyalu_dut/single_cycle_add_and_xor.vhd -scope /top/DUT/add_and_xor -line 49 -code b
+coverage attribute -name TESTNAME -value fibonacci_test
 coverage save fibonacci_test.ucdb
 
 vsim top_optimized -coverage +UVM_TESTNAME=parallel_test 
@@ -21,6 +22,7 @@ log /* -r
 run -all
 coverage exclude -src tinyalu_dut/single_cycle_add_and_xor.vhd -line 49 -code s
 coverage exclude -src tinyalu_dut/single_cycle_add_and_xor.vhd -scope /top/DUT/add_and_xor -line 49 -code b
+coverage attribute -name TESTNAME -value parallel_test
 coverage save parallel_test.ucdb
 
 vsim top_optimized -coverage +UVM_TESTNAME=full_test
@@ -30,6 +32,7 @@ log /* -r
 run -all
 coverage exclude -src tinyalu_dut/single_cycle_add_and_xor.vhd -line 49 -code s
 coverage exclude -src tinyalu_dut/single_cycle_add_and_xor.vhd -scope /top/DUT/add_and_xor -line 49 -code b
+coverage attribute -name TESTNAME -value full_test
 coverage save full_test.ucdb
 
 vcover merge  tinyalu.ucdb fibonacci_test.ucdb parallel_test.ucdb full_test.ucdb
