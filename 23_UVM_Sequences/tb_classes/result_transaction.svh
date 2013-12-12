@@ -38,6 +38,21 @@ class result_transaction extends uvm_transaction;
       return s;
    endfunction : convert2string
 
+   function bit do_compare(uvm_object rhs, uvm_comparer comparer);
+      result_transaction RHS;
+      bit    same;
+      assert(rhs != null) else
+        $fatal(1,"Tried to copare null transaction");
+
+      same = super.do_compare(rhs, comparer);
+
+      $cast(RHS, rhs);
+      same = (result == RHS.result) && same;
+      return same;
+   endfunction : do_compare
+   
+        
+
 endclass : result_transaction
 
       

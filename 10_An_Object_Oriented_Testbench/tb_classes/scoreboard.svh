@@ -24,6 +24,7 @@ class scoreboard;
       shortint predicted_result;
       forever begin : self_checker
          @(posedge bfm.done) 
+	   #1;
            case (bfm.op_set)
              add_op: predicted_result = bfm.A + bfm.B;
              and_op: predicted_result = bfm.A & bfm.B;

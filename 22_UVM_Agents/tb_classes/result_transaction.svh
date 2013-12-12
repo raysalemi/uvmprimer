@@ -14,49 +14,44 @@
    limitations under the License.
 */
 class result_transaction extends uvm_transaction;
-   `uvm_object_utils(result_transaction)
 
    shortint result;
-   
-   function bit do_compare(uvm_object rhs, uvm_comparer comparer);
-      result_transaction tested;
-      bit   same;
-      
-      if (!$cast(tested,rhs))
-        same = 0;
-      else
-        same = super.do_compare(rhs, comparer) && 
-               (tested.result == result);
-      
-      return same;
-   endfunction : do_compare
+
+   function new(string name = "");
+      super.new(name);
+   endfunction : new
+
 
    function void do_copy(uvm_object rhs);
       result_transaction copied_transaction_h;
-
-      if(rhs == null) 
-        `uvm_fatal(get_type_name(), "Tried to copy from a null pointer")
-
-      if(!$cast(copied_transaction_h,rhs))
-        `uvm_fatal(get_type_name(),
-         {"Tried to copy to ",get_type_name()," with wrong transaction type: ", rhs.get_type_name()});
-      
-      super.do_copy(rhs); // copy all parent class data
-
+      assert(rhs != null) else
+        $fatal(1,"Tried to copy null transaction");
+      super.do_copy(rhs);
+      assert($cast(copied_transaction_h,rhs)) else
+        $fatal(1,"Faied cast in do_copy");
       result = copied_transaction_h.result;
-
    endfunction : do_copy
 
-   
    function string convert2string();
       string s;
       s = $sformatf("result: %4h",result);
       return s;
    endfunction : convert2string
+
+   function bit do_compare(uvm_object rhs, uvm_comparer comparer);
+      result_transaction RHS;
+      bit    same;
+      assert(rhs != null) else
+        $fatal(1,"Tried to copare null transaction");
+
+      same = super.do_compare(rhs, comparer);
+
+      $cast(RHS, rhs);
+      same = (result == RHS.result) && same;
+      return same;
+   endfunction : do_compare
    
-   function new (string name = "");
-      super.new(name);
-   endfunction : new
+        
 
 endclass : result_transaction
 

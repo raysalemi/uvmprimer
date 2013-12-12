@@ -18,6 +18,7 @@ module scoreboard(tinyalu_bfm bfm);
 
    always @(posedge bfm.done) begin 
       shortint predicted_result;
+      #1;
       case (bfm.op_set)
         add_op: predicted_result = bfm.A + bfm.B;
         and_op: predicted_result = bfm.A & bfm.B;

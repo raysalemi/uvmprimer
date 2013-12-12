@@ -163,6 +163,7 @@ module top;
 
    always @(posedge done) begin : scoreboard
       shortint predicted_result;
+      #1;
       case (op_set)
         add_op: predicted_result = A + B;
         and_op: predicted_result = A & B;
