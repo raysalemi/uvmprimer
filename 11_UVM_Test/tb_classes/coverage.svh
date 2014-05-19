@@ -16,8 +16,8 @@
 class coverage;
 
    virtual tinyalu_bfm bfm;
-   
-   
+
+
    byte         unsigned        A;
    byte         unsigned        B;
    operation_t  op_set;
@@ -34,7 +34,7 @@ class coverage;
          bins sngl_mul[] = ([add_op:xor_op],no_op => mul_op);
          bins mul_sngl[] = (mul_op => [add_op:xor_op], no_op);
 
-         bins twoops[] = ([add_op:no_op] [* 2]);
+         bins twoops[] = ([add_op:mul_op] [* 2]);
          bins manymult = (mul_op [* 3:5]);
 
 
@@ -93,14 +93,14 @@ class coverage;
       }
 
 endgroup
-   
+
    function new (virtual tinyalu_bfm b);
      op_cov = new();
      zeros_or_ones_on_ops = new();
      bfm = b;
    endfunction : new
 
-   
+
 
    task execute();
       forever begin  : sampling_block
@@ -112,7 +112,7 @@ endgroup
          zeros_or_ones_on_ops.sample();
       end : sampling_block
    endtask : execute
-      
+
 endclass : coverage
 
 

@@ -34,7 +34,7 @@ class coverage extends uvm_component;
          bins sngl_mul[] = ([add_op:xor_op],no_op => mul_op);
          bins mul_sngl[] = (mul_op => [add_op:xor_op], no_op);
 
-         bins twoops[] = ([add_op:no_op] [* 2]);
+         bins twoops[] = ([add_op:mul_op] [* 2]);
          bins manymult = (mul_op [* 3:5]);
 
 
@@ -93,7 +93,7 @@ class coverage extends uvm_component;
       }
 
 endgroup
-   
+
 
    function new (string name, uvm_component parent);
       super.new(name, parent);
@@ -117,7 +117,7 @@ endfunction : build_phase
          zeros_or_ones_on_ops.sample();
       end : sampling_block
    endtask : run_phase
-      
+
 endclass : coverage
 
 

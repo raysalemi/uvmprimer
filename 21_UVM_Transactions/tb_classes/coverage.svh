@@ -15,8 +15,8 @@
 */
 class coverage extends uvm_subscriber #(command_transaction);
    `uvm_component_utils(coverage)
-   
-   
+
+
    byte         unsigned        A;
    byte         unsigned        B;
    operation_t  op_set;
@@ -33,7 +33,7 @@ class coverage extends uvm_subscriber #(command_transaction);
          bins sngl_mul[] = ([add_op:xor_op],no_op => mul_op);
          bins mul_sngl[] = (mul_op => [add_op:xor_op], no_op);
 
-         bins twoops[] = ([add_op:no_op] [* 2]);
+         bins twoops[] = ([add_op:mul_op] [* 2]);
          bins manymult = (mul_op [* 3:5]);
 
          bins rstmulrst   = (rst_op => mul_op [=  2] => rst_op);
@@ -94,7 +94,7 @@ class coverage extends uvm_subscriber #(command_transaction);
       }
 
 endgroup
-   
+
 
    function new (string name, uvm_component parent);
       super.new(name, parent);
@@ -102,7 +102,7 @@ endgroup
       zeros_or_ones_on_ops = new();
    endfunction : new
 
-   
+
 
    function void write(command_transaction t);
          A = t.A;
@@ -111,7 +111,7 @@ endgroup
          op_cov.sample();
          zeros_or_ones_on_ops.sample();
    endfunction : write
-      
+
 endclass : coverage
 
 
