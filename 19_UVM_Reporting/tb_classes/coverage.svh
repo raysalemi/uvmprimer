@@ -26,13 +26,13 @@ class coverage extends uvm_subscriber #(command_s);
          bins single_cycle[] = {[add_op : xor_op], rst_op,no_op};
          bins multi_cycle = {mul_op};
 
-         bins opn_rst[] = ([add_op:no_op] => rst_op);
-         bins rst_opn[] = (rst_op => [add_op:no_op]);
+         bins opn_rst[] = ([add_op:mul_op] => rst_op);
+         bins rst_opn[] = (rst_op => [add_op:mul_op]);
 
          bins sngl_mul[] = ([add_op:xor_op],no_op => mul_op);
          bins mul_sngl[] = (mul_op => [add_op:xor_op], no_op);
 
-         bins twoops[] = ([add_op:no_op] [* 2]);
+         bins twoops[] = ([add_op:mul_op] [* 2]);
          bins manymult = (mul_op [* 3:5]);
 
          bins rstmulrst   = (rst_op => mul_op [=  2] => rst_op);

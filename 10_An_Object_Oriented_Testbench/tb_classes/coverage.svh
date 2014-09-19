@@ -28,8 +28,8 @@ class coverage;
          bins single_cycle[] = {[add_op : xor_op], rst_op,no_op};
          bins multi_cycle = {mul_op};
 
-         bins opn_rst[] = ([add_op:no_op] => rst_op);
-         bins rst_opn[] = (rst_op => [add_op:no_op]);
+         bins opn_rst[] = ([add_op:mul_op] => rst_op);
+         bins rst_opn[] = (rst_op => [add_op:mul_op]);
 
          bins sngl_mul[] = ([add_op:xor_op],no_op => mul_op);
          bins mul_sngl[] = (mul_op => [add_op:xor_op], no_op);
