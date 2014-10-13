@@ -100,7 +100,8 @@ interface tinyalu_bfm;
 
    always @(negedge reset_n) begin : rst_monitor
       command_transaction command;
-      command_monitor_h.write_to_monitor($random,0,rst_op);
+      if (command_monitor_h != null) //guard against VCS time 0 negedge
+        command_monitor_h.write_to_monitor($random,0,rst_op);
    end : rst_monitor
    
    result_monitor  result_monitor_h;

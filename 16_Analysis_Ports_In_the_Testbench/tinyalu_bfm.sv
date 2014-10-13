@@ -85,7 +85,8 @@ interface tinyalu_bfm;
    end : cmd_monitor
 
    always @(negedge reset_n) begin : rst_monitor
-      command_monitor_h.write_to_monitor(A, B, rst_op);
+      if (command_monitor_h != null) //guard against VCS time 0 negedge
+         command_monitor_h.write_to_monitor(A, B, rst_op);
    end : rst_monitor
    
 
