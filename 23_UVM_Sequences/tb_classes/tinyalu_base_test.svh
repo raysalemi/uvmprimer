@@ -13,7 +13,11 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 */
+`ifdef QUESTA
 virtual class tinyalu_base_test extends uvm_test;
+`else 
+class tinyalu_base_test extends uvm_test;
+`endif
 
    env       env_h;
    sequencer sequencer_h;
