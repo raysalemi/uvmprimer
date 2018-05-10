@@ -29,8 +29,9 @@ class short_random_sequence extends uvm_sequence #(sequence_item);
          command = sequence_item::type_id::create("command");
          start_item(command);
          assert(command.randomize());
-	 `uvm_info("SHORT RANDOM", $sformatf("random command: %s", command.convert2string), UVM_MEDIUM)
          finish_item(command);
+// Moved relative to the book example so as to show result
+    `uvm_info("SHORT RANDOM", $sformatf("random command: %s", command.convert2string), UVM_MEDIUM)
       end : short_random_loop
    endtask : body
 endclass : short_random_sequence
