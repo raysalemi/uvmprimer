@@ -42,7 +42,7 @@ class lion extends animal;
    function string convert2string();
       string gender_s;
       gender_s = (is_female) ? "Female" : "Male";
-      return sformat("Age: %0d Gender: ",age, gender_s);
+      return $sformat("Age: %0d Gender: ",age, gender_s);
    endfunction : convert2string
 
    function void do_copy(animal copied_animal);
