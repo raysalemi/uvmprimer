@@ -48,6 +48,8 @@ interface tinyalu_bfm;
   task send_op(input byte iA, input byte iB, input operation_t iop, output shortint alu_result);
      
       if (iop == rst_op) begin
+         @(negedge clk);
+         op_set = iop;         
          @(posedge clk);
          reset_n = 1'b0;
          start = 1'b0;
