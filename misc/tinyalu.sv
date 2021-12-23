@@ -9,6 +9,7 @@ module tinyalu (input [7:0] A,
 
    wire [15:0] 		      result_aax, result_mult;
    wire 		      start_single, start_mult;
+   wire                       done_aax, done_mult;	
 
    assign start_single = start & ~op[2];
    assign start_mult   = start & op[2];
